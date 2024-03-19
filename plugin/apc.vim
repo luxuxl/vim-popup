@@ -123,13 +123,9 @@ function! s:apc_enable()
 
 		let b:apc_init_tab = 1
 	endif
-	if get(g:, 'apc_cr_confirm', 0) == 0
-		inoremap <silent><buffer><expr> <cr> 
-					\ pumvisible()? "\<c-y>\<cr>" : "\<cr>"
-	else
-		inoremap <silent><buffer><expr> <cr> 
-					\ pumvisible()? "\<c-y>" : "\<cr>"
-	endif
+
+	inoremap <silent><buffer><expr> <cr> pumvisible()? "\<c-n>" : "\<cr>"
+
 	inoremap <silent><buffer><expr> <bs> <SID>on_backspace()
 	let b:apc_init_bs = 1
 	let b:apc_init_cr = 1
