@@ -117,6 +117,10 @@ function! s:apc_enable()
 					\ get(b:, 'apc_trigger', g:apc_trigger)
 		inoremap <silent><buffer><expr> <s-tab>
 					\ pumvisible()? "\<c-p>" : "\<s-tab>"
+
+                inoremap <silent><buffer><expr> <up> pumvisible()? "\<c-y>\<up>" : "\<up>"
+                inoremap <silent><buffer><expr> <down> pumvisible()? "\<c-y>\<down>" : "\<down>"
+
 		let b:apc_init_tab = 1
 	endif
 	if get(g:, 'apc_cr_confirm', 0) == 0
