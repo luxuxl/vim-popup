@@ -118,8 +118,8 @@ function! s:apc_enable()
 		inoremap <silent><buffer><expr> <s-tab>
 					\ pumvisible()? "\<c-p>" : "\<s-tab>"
 
-                inoremap <silent><buffer><expr> <up> pumvisible()? "\<c-y>\<up>" : "\<up>"
-                inoremap <silent><buffer><expr> <down> pumvisible()? "\<c-y>\<down>" : "\<down>"
+		inoremap <silent><buffer><expr> <up> pumvisible()? "\<c-y>\<up>" : "\<up>"
+		inoremap <silent><buffer><expr> <down> pumvisible()? "\<c-y>\<down>" : "\<down>"
 
 		let b:apc_init_tab = 1
 	endif
