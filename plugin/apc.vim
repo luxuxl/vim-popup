@@ -115,8 +115,7 @@ function! s:apc_enable()
 					\ pumvisible()? "\<c-n>" :
 					\ <SID>check_back_space() ? "\<tab>" : 
 					\ get(b:, 'apc_trigger', g:apc_trigger)
-		inoremap <silent><buffer><expr> <s-tab>
-					\ pumvisible()? "\<c-p>" : "\<s-tab>"
+		" inoremap <silent><buffer><expr> <s-tab> pumvisible()? "\<c-p>" : "\<s-tab>"
 
 		inoremap <silent><buffer><expr> <up> pumvisible()? "\<c-y>\<up>" : "\<up>"
 		inoremap <silent><buffer><expr> <down> pumvisible()? "\<c-y>\<down>" : "\<down>"
