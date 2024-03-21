@@ -142,7 +142,7 @@ function! s:apc_disable()
 	endif
 	if get(b:, 'apc_init_tab', 0)
 		silent! iunmap <buffer><expr> <tab>
-		silent! iunmap <buffer><expr> <s-tab>
+		" silent! iunmap <buffer><expr> <s-tab>
 	endif
 	if get(b:, 'apc_init_bs', 0)
 		silent! iunmap <buffer><expr> <bs>
